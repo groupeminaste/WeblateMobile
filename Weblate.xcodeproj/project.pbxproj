@@ -8,17 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		6AB65601280EDDB6001E2065 /* WeblateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB65600280EDDB6001E2065 /* WeblateApp.swift */; };
-		6AB65603280EDDB6001E2065 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB65602280EDDB6001E2065 /* ContentView.swift */; };
+		6AB65603280EDDB6001E2065 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB65602280EDDB6001E2065 /* HomeView.swift */; };
 		6AB65605280EDDB8001E2065 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB65604280EDDB8001E2065 /* Assets.xcassets */; };
 		6AB65608280EDDB8001E2065 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB65607280EDDB8001E2065 /* Preview Assets.xcassets */; };
+		6AB65610280EDDFF001E2065 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 6AB6560F280EDDFF001E2065 /* SQLite */; };
+		6AB65613280EDE26001E2065 /* APIRequest in Frameworks */ = {isa = PBXBuildFile; productRef = 6AB65612280EDE26001E2065 /* APIRequest */; };
+		6AB65616280EDE59001E2065 /* MyAppsiOS in Frameworks */ = {isa = PBXBuildFile; productRef = 6AB65615280EDE59001E2065 /* MyAppsiOS */; };
+		6AB6561C280EE0CD001E2065 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB6561B280EE0CD001E2065 /* HomeViewModel.swift */; };
+		6AB6561F280EE224001E2065 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AB65621280EE224001E2065 /* Localizable.strings */; };
+		6AB65623280EE301001E2065 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB65622280EE301001E2065 /* APIService.swift */; };
+		6AB65625280EE409001E2065 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB65624280EE409001E2065 /* APIResponse.swift */; };
+		6AB65627280EE454001E2065 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB65626280EE454001E2065 /* Project.swift */; };
+		6AB65629280EE795001E2065 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB65628280EE795001E2065 /* Component.swift */; };
+		6AB6562B280EE984001E2065 /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB6562A280EE984001E2065 /* Instance.swift */; };
+		6AB6562D280EEA6D001E2065 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB6562C280EEA6D001E2065 /* DatabaseService.swift */; };
+		6AB65630280F067E001E2065 /* CreateUpdateInstanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB6562F280F067E001E2065 /* CreateUpdateInstanceViewModel.swift */; };
+		6AB65632280F0742001E2065 /* CreateUpdateInstanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB65631280F0742001E2065 /* CreateUpdateInstanceView.swift */; };
+		6AB65635280F0F85001E2065 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB65634280F0F85001E2065 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6AB655FD280EDDB6001E2065 /* Weblate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weblate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB65600280EDDB6001E2065 /* WeblateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeblateApp.swift; sourceTree = "<group>"; };
-		6AB65602280EDDB6001E2065 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6AB65602280EDDB6001E2065 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6AB65604280EDDB8001E2065 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AB65607280EDDB8001E2065 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6AB6561B280EE0CD001E2065 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		6AB65620280EE224001E2065 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6AB65622280EE301001E2065 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		6AB65624280EE409001E2065 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		6AB65626280EE454001E2065 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		6AB65628280EE795001E2065 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		6AB6562A280EE984001E2065 /* Instance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instance.swift; sourceTree = "<group>"; };
+		6AB6562C280EEA6D001E2065 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		6AB6562E280EEB0F001E2065 /* Weblate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Weblate.entitlements; sourceTree = "<group>"; };
+		6AB6562F280F067E001E2065 /* CreateUpdateInstanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUpdateInstanceViewModel.swift; sourceTree = "<group>"; };
+		6AB65631280F0742001E2065 /* CreateUpdateInstanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUpdateInstanceView.swift; sourceTree = "<group>"; };
+		6AB65634280F0F85001E2065 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AB65616280EDE59001E2065 /* MyAppsiOS in Frameworks */,
+				6AB65610280EDDFF001E2065 /* SQLite in Frameworks */,
+				6AB65613280EDE26001E2065 /* APIRequest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,9 +80,15 @@
 		6AB655FF280EDDB6001E2065 /* Weblate */ = {
 			isa = PBXGroup;
 			children = (
+				6AB65633280F0F7B001E2065 /* Extensions */,
+				6AB65618280EDE70001E2065 /* Models */,
+				6AB6561A280EDE9C001E2065 /* Services */,
+				6AB65619280EDE77001E2065 /* ViewModels */,
+				6AB65617280EDE6A001E2065 /* Views */,
 				6AB65600280EDDB6001E2065 /* WeblateApp.swift */,
-				6AB65602280EDDB6001E2065 /* ContentView.swift */,
 				6AB65604280EDDB8001E2065 /* Assets.xcassets */,
+				6AB6562E280EEB0F001E2065 /* Weblate.entitlements */,
+				6AB65621280EE224001E2065 /* Localizable.strings */,
 				6AB65606280EDDB8001E2065 /* Preview Content */,
 			);
 			path = Weblate;
@@ -65,6 +100,52 @@
 				6AB65607280EDDB8001E2065 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6AB65617280EDE6A001E2065 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6AB65602280EDDB6001E2065 /* HomeView.swift */,
+				6AB65631280F0742001E2065 /* CreateUpdateInstanceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6AB65618280EDE70001E2065 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6AB65624280EE409001E2065 /* APIResponse.swift */,
+				6AB6562A280EE984001E2065 /* Instance.swift */,
+				6AB65626280EE454001E2065 /* Project.swift */,
+				6AB65628280EE795001E2065 /* Component.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6AB65619280EDE77001E2065 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6AB6561B280EE0CD001E2065 /* HomeViewModel.swift */,
+				6AB6562F280F067E001E2065 /* CreateUpdateInstanceViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6AB6561A280EDE9C001E2065 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6AB65622280EE301001E2065 /* APIService.swift */,
+				6AB6562C280EEA6D001E2065 /* DatabaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6AB65633280F0F7B001E2065 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6AB65634280F0F85001E2065 /* StringExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +164,11 @@
 			dependencies = (
 			);
 			name = Weblate;
+			packageProductDependencies = (
+				6AB6560F280EDDFF001E2065 /* SQLite */,
+				6AB65612280EDE26001E2065 /* APIRequest */,
+				6AB65615280EDE59001E2065 /* MyAppsiOS */,
+			);
 			productName = Weblate;
 			productReference = 6AB655FD280EDDB6001E2065 /* Weblate.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +197,11 @@
 				Base,
 			);
 			mainGroup = 6AB655F4280EDDB6001E2065;
+			packageReferences = (
+				6AB6560E280EDDFF001E2065 /* XCRemoteSwiftPackageReference "SQLite" */,
+				6AB65611280EDE26001E2065 /* XCRemoteSwiftPackageReference "APIRequest" */,
+				6AB65614280EDE59001E2065 /* XCRemoteSwiftPackageReference "MyApps" */,
+			);
 			productRefGroup = 6AB655FE280EDDB6001E2065 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AB65608280EDDB8001E2065 /* Preview Assets.xcassets in Resources */,
+				6AB6561F280EE224001E2065 /* Localizable.strings in Resources */,
 				6AB65605280EDDB8001E2065 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,12 +229,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AB65603280EDDB6001E2065 /* ContentView.swift in Sources */,
+				6AB6562D280EEA6D001E2065 /* DatabaseService.swift in Sources */,
+				6AB65603280EDDB6001E2065 /* HomeView.swift in Sources */,
+				6AB65629280EE795001E2065 /* Component.swift in Sources */,
+				6AB6561C280EE0CD001E2065 /* HomeViewModel.swift in Sources */,
+				6AB65632280F0742001E2065 /* CreateUpdateInstanceView.swift in Sources */,
+				6AB65623280EE301001E2065 /* APIService.swift in Sources */,
+				6AB65625280EE409001E2065 /* APIResponse.swift in Sources */,
 				6AB65601280EDDB6001E2065 /* WeblateApp.swift in Sources */,
+				6AB65635280F0F85001E2065 /* StringExtension.swift in Sources */,
+				6AB6562B280EE984001E2065 /* Instance.swift in Sources */,
+				6AB65630280F067E001E2065 /* CreateUpdateInstanceViewModel.swift in Sources */,
+				6AB65627280EE454001E2065 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6AB65621280EE224001E2065 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AB65620280EE224001E2065 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6AB65609280EDDB8001E2065 /* Debug */ = {
@@ -264,6 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Weblate/Weblate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Weblate/Preview Content\"";
@@ -293,6 +407,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Weblate/Weblate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Weblate/Preview Content\"";
@@ -339,6 +454,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6AB6560E280EDDFF001E2065 /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.13.3;
+			};
+		};
+		6AB65611280EDE26001E2065 /* XCRemoteSwiftPackageReference "APIRequest" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GroupeMINASTE/APIRequest.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.3;
+			};
+		};
+		6AB65614280EDE59001E2065 /* XCRemoteSwiftPackageReference "MyApps" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NathanFallet/MyApps";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6AB6560F280EDDFF001E2065 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AB6560E280EDDFF001E2065 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+		6AB65612280EDE26001E2065 /* APIRequest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AB65611280EDE26001E2065 /* XCRemoteSwiftPackageReference "APIRequest" */;
+			productName = APIRequest;
+		};
+		6AB65615280EDE59001E2065 /* MyAppsiOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AB65614280EDE59001E2065 /* XCRemoteSwiftPackageReference "MyApps" */;
+			productName = MyAppsiOS;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6AB655F5280EDDB6001E2065 /* Project object */;
 }

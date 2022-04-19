@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Weblate
+
+  Created by Nathan Fallet on 19/04/2022.
+  
+*/
+
+"instances_title" = "Weblate instances";
+"instances_empty" = "No instance added.";
+"instances_new" = "New instance";
+"instances_update" = "Update instance";
+"instances_name" = "Name";
+"instances_host" = "Host";
+"instances_use" = "Use %@";
+"instances_token" = "Token";
+"instances_token_footer" = "Get your token by going to you profile, then API access.";
+"instances_save" = "Save";
