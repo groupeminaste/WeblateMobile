@@ -20,20 +20,29 @@ struct HomeView: View {
                         Text("instances_empty")
                     } else {
                         ForEach(viewModel.instances) { instance in
-                            HStack(spacing: 12) {
-                                Image("Weblate")
-                                    .resizable()
-                                    .frame(width: 44, height: 44)
-                                    .cornerRadius(8)
-                                    .padding(.vertical, 8)
-                                VStack(alignment: .leading, spacing: 4) {
-                                    Text(instance.name)
-                                    Text(instance.host)
-                                        .font(.footnote)
-                                        .foregroundColor(.secondary)
+                            NavigationLink(
+                                destination: {
+                                    InstanceView(viewModel: InstanceViewModel(
+                                        instance: instance
+                                    ))
+                                },
+                                label: {
+                                    HStack(spacing: 12) {
+                                        Image("Weblate")
+                                            .resizable()
+                                            .frame(width: 44, height: 44)
+                                            .cornerRadius(8)
+                                            .padding(.vertical, 8)
+                                        VStack(alignment: .leading, spacing: 4) {
+                                            Text(instance.name)
+                                            Text(instance.host)
+                                                .font(.footnote)
+                                                .foregroundColor(.secondary)
+                                        }
+                                        Spacer()
+                                    }
                                 }
-                                Spacer()
-                            }
+                            )
                         }
                     }
                 }

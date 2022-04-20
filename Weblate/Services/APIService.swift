@@ -47,4 +47,30 @@ class APIService {
             .execute(APIResponse<Component>.self, completionHandler: completionHandler)
     }
     
+    func getProjectStatistics(
+        project: String,
+        completionHandler: @escaping (Statistics?, APIResponseStatus) -> Void
+    ) {
+        APIRequest("GET", path: "/api/projects/\(project)/statistics/", configuration: configuration)
+            .execute(Statistics.self, completionHandler: completionHandler)
+    }
+    
+    func getComponentStatistics(
+        project: String,
+        component: String,
+        completionHandler: @escaping (APIResponse<Statistics>?, APIResponseStatus) -> Void
+    ) {
+        APIRequest("GET", path: "/api/components/\(project)/\(component)/statistics/", configuration: configuration)
+            .execute(APIResponse<Statistics>.self, completionHandler: completionHandler)
+    }
+    
+    func getComponentTranslations(
+        project: String,
+        component: String,
+        completionHandler: @escaping (APIResponse<Translation>?, APIResponseStatus) -> Void
+    ) {
+        APIRequest("GET", path: "/api/components/\(project)/\(component)/translations/", configuration: configuration)
+            .execute(APIResponse<Translation>.self, completionHandler: completionHandler)
+    }
+    
 }

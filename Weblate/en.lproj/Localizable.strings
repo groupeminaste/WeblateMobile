@@ -16,3 +16,6 @@
 "instances_token" = "Token";
 "instances_token_footer" = "Get your token by going to you profile, then API access.";
 "instances_save" = "Save";
+"instances_projects" = "Projects";
+"instances_components" = "Components";
+"instances_translations" = "Translations";

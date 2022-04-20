@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Component: Codable {
+struct Component: Codable, Identifiable {
     
     var id: Int
     var name: String
