@@ -9,7 +9,7 @@ import Foundation
 
 struct Translation: Codable, Identifiable {
     
-    var id: Int
+    var id: Int64
     var language: Language
     var is_source: Bool
     var translated_percent: Double

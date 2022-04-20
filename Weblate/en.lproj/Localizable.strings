@@ -19,3 +19,5 @@
 "instances_projects" = "Projects";
 "instances_components" = "Components";
 "instances_translations" = "Translations";
+"instances_units_field" = "Enter a translation here…";
+"instances_units_save" = "Save and continue";

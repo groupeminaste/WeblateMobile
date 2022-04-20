@@ -9,7 +9,7 @@ import Foundation
 
 struct Component: Codable, Identifiable {
     
-    var id: Int
+    var id: Int64
     var name: String
     var slug: String
     var project: Project?

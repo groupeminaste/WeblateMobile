@@ -27,7 +27,10 @@ class ComponentViewModel: ObservableObject {
     func onAppear() {
         let api = APIService(host: instance.host, token: instance.token)
         
-        api.getComponentTranslations(project: project.slug, component: component.slug) { data, status in
+        api.getComponentTranslations(
+            project: project.slug,
+            component: component.slug
+        ) { data, status in
             if let data = data, status == .ok {
                 self.translations = data.results
             }

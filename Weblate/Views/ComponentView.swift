@@ -9,19 +9,29 @@ import SwiftUI
 
 struct ComponentView: View {
     
-    @Environment(\.presentationMode) var presentationMode
-    
     @StateObject var viewModel: ComponentViewModel
     
     var body: some View {
         Form {
             Section(header: Text("instances_translations")) {
                 ForEach(viewModel.translations) { translation in
-                    ComponentTranslationView(
-                        instance: viewModel.instance,
-                        project: viewModel.project,
-                        component: viewModel.component,
-                        translation: translation
+                    NavigationLink(
+                        destination: {
+                            TranslationView(viewModel: TranslationViewModel(
+                                instance: viewModel.instance,
+                                project: viewModel.project,
+                                component: viewModel.component,
+                                translation: translation
+                            ))
+                        },
+                        label: {
+                            ComponentTranslationView(
+                                instance: viewModel.instance,
+                                project: viewModel.project,
+                                component: viewModel.component,
+                                translation: translation
+                            )
+                        }
                     )
                 }
             }

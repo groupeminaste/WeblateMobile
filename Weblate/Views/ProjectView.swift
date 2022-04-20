@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ProjectView: View {
     
-    @Environment(\.presentationMode) var presentationMode
-    
     @StateObject var viewModel: ProjectViewModel
     
     var body: some View {

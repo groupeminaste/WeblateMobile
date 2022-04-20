@@ -25,7 +25,9 @@ class ProjectViewModel: ObservableObject {
     func onAppear() {
         let api = APIService(host: instance.host, token: instance.token)
         
-        api.getComponents(project: project.slug) { data, status in
+        api.getComponents(
+            project: project.slug
+        ) { data, status in
             if let data = data, status == .ok {
                 self.components = data.results
             }

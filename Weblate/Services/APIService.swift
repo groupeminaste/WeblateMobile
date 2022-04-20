@@ -58,19 +58,46 @@ class APIService {
     func getComponentStatistics(
         project: String,
         component: String,
+        page: Int = 1,
         completionHandler: @escaping (APIResponse<Statistics>?, APIResponseStatus) -> Void
     ) {
         APIRequest("GET", path: "/api/components/\(project)/\(component)/statistics/", configuration: configuration)
+            .with(name: "page", value: page)
             .execute(APIResponse<Statistics>.self, completionHandler: completionHandler)
     }
     
     func getComponentTranslations(
         project: String,
         component: String,
+        page: Int = 1,
         completionHandler: @escaping (APIResponse<Translation>?, APIResponseStatus) -> Void
     ) {
         APIRequest("GET", path: "/api/components/\(project)/\(component)/translations/", configuration: configuration)
+            .with(name: "page", value: page)
             .execute(APIResponse<Translation>.self, completionHandler: completionHandler)
+    }
+    
+    func getTranslationUnits(
+        project: String,
+        component: String,
+        language: String,
+        page: Int = 1,
+        completionHandler: @escaping (APIResponse<Unit>?, APIResponseStatus) -> Void
+    ) {
+        APIRequest("GET", path: "/api/translations/\(project)/\(component)/\(language)/units/", configuration: configuration)
+            .with(name: "page", value: page)
+            .execute(APIResponse<Unit>.self, completionHandler: completionHandler)
+    }
+    
+    func patchUnit(
+        unit: Int64,
+        target: [String],
+        state: Int,
+        completionHandler: @escaping (Unit?, APIResponseStatus) -> Void
+    ) {
+        APIRequest("PATCH", path: "/api/units/\(unit)/", configuration: configuration)
+            .with(body: ["target": target, "state": state])
+            .execute(Unit.self, completionHandler: completionHandler)
     }
     
 }
