@@ -43,6 +43,11 @@ class TranslationViewModel: ObservableObject {
     }
     
     func onAppear() {
+        // Some reset before (needed when changing query)
+        self.nextPage = nil
+        self.currentUnit = 0
+        
+        // And then fetch new fresh data
         instance.api.getTranslationUnits(
             project: project.slug,
             component: component.slug,

@@ -59,7 +59,7 @@ struct TranslationView: View {
                     footer: Text(viewModel.currentExplanation)
                 ) {
                     Text(viewModel.currentSource)
-                    TextField("instances_units_field", text: $viewModel.currentTarget)
+                    TextEditor(text: $viewModel.currentTarget)
                 }
                 
                 Section {
