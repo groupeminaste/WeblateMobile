@@ -32,6 +32,11 @@ struct InstanceView: View {
                         }
                     )
                 }
+                if viewModel.nextPage != nil {
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                        .onAppear(perform: viewModel.loadMore)
+                }
             }
         }
         .navigationTitle(Text(viewModel.instance.name))

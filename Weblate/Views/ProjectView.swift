@@ -32,6 +32,11 @@ struct ProjectView: View {
                         }
                     )
                 }
+                if viewModel.nextPage != nil {
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                        .onAppear(perform: viewModel.loadMore)
+                }
             }
         }
         .navigationTitle(Text(viewModel.project.name))

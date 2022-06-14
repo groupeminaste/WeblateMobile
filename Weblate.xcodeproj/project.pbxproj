@@ -37,6 +37,7 @@
 		6AB65635280F0F85001E2065 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB65634280F0F85001E2065 /* StringExtension.swift */; };
 		6AB65637280F1175001E2065 /* InstanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB65636280F1175001E2065 /* InstanceView.swift */; };
 		6AB65639280F11A7001E2065 /* InstanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB65638280F11A7001E2065 /* InstanceViewModel.swift */; };
+		6ADDAB662858704500B40346 /* SearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADDAB652858704500B40346 /* SearchQuery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		6AB65634280F0F85001E2065 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		6AB65636280F1175001E2065 /* InstanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceView.swift; sourceTree = "<group>"; };
 		6AB65638280F11A7001E2065 /* InstanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceViewModel.swift; sourceTree = "<group>"; };
+		6ADDAB652858704500B40346 /* SearchQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchQuery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				6A11C6A4280FE3CF00286294 /* Translation.swift */,
 				6A11C6A2280FE1F200286294 /* Language.swift */,
 				6A11C6AA280FE82700286294 /* Unit.swift */,
+				6ADDAB652858704500B40346 /* SearchQuery.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				6A11C6A9280FE4A500286294 /* ComponentViewModel.swift in Sources */,
 				6AB6561C280EE0CD001E2065 /* HomeViewModel.swift in Sources */,
 				6AB65632280F0742001E2065 /* CreateUpdateInstanceView.swift in Sources */,
+				6ADDAB662858704500B40346 /* SearchQuery.swift in Sources */,
 				6AB65639280F11A7001E2065 /* InstanceViewModel.swift in Sources */,
 				6A11C6AF280FE9E500286294 /* TranslationViewModel.swift in Sources */,
 				6A11C6AD280FE9D800286294 /* TranslationView.swift in Sources */,

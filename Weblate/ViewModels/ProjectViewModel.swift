@@ -14,6 +14,7 @@ class ProjectViewModel: ObservableObject {
     @Published var instance: Instance
     @Published var project: Project
     @Published var components = [Component]()
+    @Published var nextPage: Int?
     
     // Methods
     
@@ -23,13 +24,38 @@ class ProjectViewModel: ObservableObject {
     }
     
     func onAppear() {
-        let api = APIService(host: instance.host, token: instance.token)
-        
-        api.getComponents(
+        instance.api.getComponents(
             project: project.slug
         ) { data, status in
             if let data = data, status == .ok {
+                // Save components
                 self.components = data.results
+                
+                // Check if there are more
+                if data.next != nil {
+                    self.nextPage = 2
+                }
+            }
+        }
+    }
+    
+    func loadMore() {
+        guard let nextPage = nextPage else {
+            return
+        }
+
+        instance.api.getComponents(
+            project: project.slug,
+            page: nextPage
+        ) { data, status in
+            if let data = data, status == .ok {
+                // Append
+                self.components.append(contentsOf: data.results)
+                
+                // Check if there are more
+                if data.next != nil {
+                    self.nextPage = nextPage + 1
+                }
             }
         }
     }

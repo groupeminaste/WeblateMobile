@@ -14,9 +14,34 @@ struct TranslationView: View {
     var body: some View {
         Form {
             Section(header: Text("instances_units_header")) {
-                // Make some header for the translation view (to track state)
-                Text("Add some header here")
+                Picker("instances_units_query", selection: $viewModel.searchQuery) {
+                    ForEach(SearchQuery.allCases) { query in
+                        Text("instances_units_query_\(query.rawValue)".localized()).tag(query)
+                    }
+                }
+                VStack {
+                    HStack {
+                        Text("instances_units_header")
+                        Spacer()
+                        if let total = viewModel.progressTotal, total != 0 {
+                            Text("\(Int(Double(viewModel.units.filter({ $0.translated }).count) / Double(total)))%")
+                                .font(.footnote)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                    if let total = viewModel.progressTotal, total != 0 {
+                        ProgressView(
+                            value: Double(viewModel.units.filter({ $0.translated }).count),
+                            total: Double(total)
+                        )
+                    } else {
+                        ProgressView()
+                            .progressViewStyle(.circular)
+                    }
+                }
+                .padding(.vertical, 8)
             }
+
             
             if viewModel.currentUnit != 0 {
                 Section(
@@ -26,6 +51,11 @@ struct TranslationView: View {
                     Text(viewModel.currentSource)
                     TextField("instances_units_field", text: $viewModel.currentTarget)
                     Button("instances_units_save", action: viewModel.saveCurrent)
+                }
+            } else if viewModel.nextPage != nil {
+                Section {
+                    ProgressView()
+                        .progressViewStyle(.circular)
                 }
             }
         }

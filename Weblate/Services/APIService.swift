@@ -81,10 +81,12 @@ class APIService {
         project: String,
         component: String,
         language: String,
+        q: String = "",
         page: Int = 1,
         completionHandler: @escaping (APIResponse<Unit>?, APIResponseStatus) -> Void
     ) {
         APIRequest("GET", path: "/api/translations/\(project)/\(component)/\(language)/units/", configuration: configuration)
+            .with(name: "q", value: q)
             .with(name: "page", value: page)
             .execute(APIResponse<Unit>.self, completionHandler: completionHandler)
     }

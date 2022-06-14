@@ -34,6 +34,11 @@ struct ComponentView: View {
                         }
                     )
                 }
+                if viewModel.nextPage != nil {
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                        .onAppear(perform: viewModel.loadMore)
+                }
             }
         }
         .navigationTitle(Text(viewModel.component.name))

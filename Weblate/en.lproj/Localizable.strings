@@ -19,5 +19,9 @@
 "instances_projects" = "Projects";
 "instances_components" = "Components";
 "instances_translations" = "Translations";
+"instances_units_header" = "Translation status";
 "instances_units_field" = "Enter a translation here…";
 "instances_units_save" = "Save and continue";
+"instances_units_query" = "Show:";
+"instances_units_query_untranslated" = "Unstranslated strings";
+"instances_units_query_unfinished" = "Unfinished strings";

@@ -13,6 +13,7 @@ class InstanceViewModel: ObservableObject {
     
     @Published var instance: Instance
     @Published var projects = [Project]()
+    @Published var nextPage: Int?
     
     // Methods
     
@@ -21,11 +22,33 @@ class InstanceViewModel: ObservableObject {
     }
     
     func onAppear() {
-        let api = APIService(host: instance.host, token: instance.token)
-        
-        api.getProjects { data, status in
+        instance.api.getProjects { data, status in
             if let data = data, status == .ok {
+                // Save projects
                 self.projects = data.results
+                
+                // Check if there are more
+                if data.next != nil {
+                    self.nextPage = 2
+                }
+            }
+        }
+    }
+    
+    func loadMore() {
+        guard let nextPage = nextPage else {
+            return
+        }
+
+        instance.api.getProjects(page: nextPage) { data, status in
+            if let data = data, status == .ok {
+                // Append
+                self.projects.append(contentsOf: data.results)
+                
+                // Check if there are more
+                if data.next != nil {
+                    self.nextPage = nextPage + 1
+                }
             }
         }
     }

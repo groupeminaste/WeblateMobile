@@ -14,4 +14,8 @@ struct Instance: Codable, Identifiable {
     var host: String
     var token: String
     
+    var api: APIService {
+        APIService(host: host, token: token)
+    }
+    
 }
