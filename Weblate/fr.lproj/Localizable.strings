@@ -13,3 +13,7 @@
 "instances_units_field" = "Entrer une traduction…";
 "instances_units_save" = "Enregistrer et continuer";
 "instances_use" = "Utiliser %@";
+"instances_units_query_untranslated" = "Chaines non traduites";
+"instances_units_query_unfinished" = "Chaînes non terminées";
+"instances_units_header" = "Statut de la traduction";
+"instances_units_query" = "Afficher :";
