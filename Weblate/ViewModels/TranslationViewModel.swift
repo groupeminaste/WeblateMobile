@@ -5,7 +5,7 @@
 //  Created by Nathan Fallet on 20/04/2022.
 //
 
-import Foundation
+import SwiftUI
 
 class TranslationViewModel: ObservableObject {
     
@@ -26,12 +26,15 @@ class TranslationViewModel: ObservableObject {
     @Published var currentExplanation = ""
     @Published var currentSource = ""
     @Published var currentTarget = ""
+    @Published var currentState = 0
     
     @Published var searchQuery: SearchQuery = .untranslated {
         didSet {
             onAppear()
         }
     }
+    
+    var needsEditing: Binding<Bool>?
     
     // Methods
     
@@ -121,6 +124,11 @@ class TranslationViewModel: ObservableObject {
             currentIndex = index
             currentSource = next.source[index]
             currentTarget = next.target[index]
+            currentState = next.state
+            needsEditing = Binding<Bool>(
+                get: { self.currentState == 10 },
+                set: { self.currentState = $0 ? 10 : next.state }
+            )
         } else {
             currentUnit = 0
             loadMore()
@@ -138,7 +146,7 @@ class TranslationViewModel: ObservableObject {
         instance.api.patchUnit(
             unit: units[currentUnitIndex].id,
             target: units[currentUnitIndex].target,
-            state: max(units[currentUnitIndex].translated ? 20 : 0, units[currentUnitIndex].state)
+            state: max(units[currentUnitIndex].translated ? 20 : 0, currentState)
         ) { data, status in
             // Check if next should be loaded (or if we stay here)
             if loadNext {

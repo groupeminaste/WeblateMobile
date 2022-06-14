@@ -59,7 +59,19 @@ struct TranslationView: View {
                     footer: Text(viewModel.currentExplanation)
                 ) {
                     Text(viewModel.currentSource)
-                    TextEditor(text: $viewModel.currentTarget)
+                    ZStack {
+                        if viewModel.currentTarget.isEmpty {
+                            Text("instances_units_field")
+                                .foregroundColor(.secondary)
+                        }
+                        TextEditor(text: $viewModel.currentTarget)
+                            .frame(minHeight: 100)
+                    }
+                    if let needsEditing = viewModel.needsEditing {
+                        Toggle(isOn: needsEditing) {
+                            Text("instances_units_needs_editing")
+                        }
+                    }
                 }
                 
                 Section {

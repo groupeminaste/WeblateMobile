@@ -22,6 +22,7 @@
 "instances_units_header" = "Translation status";
 "instances_units_header_nothing" = "There is nothing to translate here.";
 "instances_units_field" = "Enter a translation here…";
+"instances_units_needs_editing" = "Needs editing";
 "instances_units_save_and_continue" = "Save and continue";
 "instances_units_save" = "Save";
 "instances_units_skip" = "Skip";
