@@ -19,6 +19,7 @@ class TranslationViewModel: ObservableObject {
     @Published var progressTotal: Int?
     @Published var nextPage: Int?
     
+    @Published var searchingOffset: Int64 = 0
     @Published var currentUnit: Int64 = 0
     @Published var currentIndex = 0
     @Published var currentContext = ""
@@ -90,10 +91,25 @@ class TranslationViewModel: ObservableObject {
         }
     }
     
-    func loadNextUnit() {
-        if let next = units.first(where: { !$0.translated && $0.id >= currentUnit }) {
+    func fetchNextUnit() -> Unit? {
+        if let next = units.first(where: { $0.id >= currentUnit + searchingOffset }) {
             let defaultIndex = next.id == currentUnit ? currentIndex + 1 : 0
-            let index = next.target.firstIndex(where: { $0.isEmpty }) ?? defaultIndex
+            if defaultIndex >= next.source.count {
+                // Get next
+                searchingOffset += 1
+                return fetchNextUnit()
+            } else {
+                // It's the one we want!
+                searchingOffset = 0
+                return next
+            }
+        }
+        return nil
+    }
+    
+    func loadNextUnit() {
+        if let next = fetchNextUnit() {
+            let index = next.id == currentUnit ? currentIndex + 1 : 0
             currentUnit = next.id
             currentContext = next.context
             currentExplanation = next.explanation
@@ -106,7 +122,7 @@ class TranslationViewModel: ObservableObject {
         }
     }
     
-    func saveCurrent() {
+    func saveCurrent(loadNext: Bool = true) {
         guard let currentUnitIndex = units.firstIndex(where: { $0.id == currentUnit })
         else { return }
         
@@ -114,14 +130,16 @@ class TranslationViewModel: ObservableObject {
         units[currentUnitIndex].target[currentIndex] = currentTarget
         units[currentUnitIndex].translated = !units[currentUnitIndex].target.contains(where: { $0.isEmpty })
         
-        let api = APIService(host: instance.host, token: instance.token)
-        api.patchUnit(
+        instance.api.patchUnit(
             unit: units[currentUnitIndex].id,
             target: units[currentUnitIndex].target,
             state: max(units[currentUnitIndex].translated ? 20 : 0, units[currentUnitIndex].state)
         ) { data, status in
-            // Go to the next one
-            self.loadNextUnit()
+            // Check if next should be loaded (or if we stay here)
+            if loadNext {
+                // Go to the next one
+                self.loadNextUnit()
+            }
         }
     }
     

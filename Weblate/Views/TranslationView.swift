@@ -23,17 +23,27 @@ struct TranslationView: View {
                     HStack {
                         Text("instances_units_header")
                         Spacer()
-                        if let total = viewModel.progressTotal, total != 0 {
-                            Text("\(Int(Double(viewModel.units.filter({ $0.translated }).count) / Double(total)))%")
-                                .font(.footnote)
-                                .foregroundColor(.secondary)
+                        if let total = viewModel.progressTotal {
+                            if total != 0 {
+                                Text("\(Int(Double(viewModel.units.filter({ $0.translated }).count) * 100 / Double(total)))%")
+                                    .font(.footnote)
+                                    .foregroundColor(.secondary)
+                            } else {
+                                Text("100%")
+                                    .font(.footnote)
+                                    .foregroundColor(.secondary)
+                            }
                         }
                     }
-                    if let total = viewModel.progressTotal, total != 0 {
-                        ProgressView(
-                            value: Double(viewModel.units.filter({ $0.translated }).count),
-                            total: Double(total)
-                        )
+                    if let total = viewModel.progressTotal {
+                        if total != 0 {
+                            ProgressView(
+                                value: Double(viewModel.units.filter({ $0.translated }).count),
+                                total: Double(total)
+                            )
+                        } else {
+                            Text("instances_units_header_nothing")
+                        }
                     } else {
                         ProgressView()
                             .progressViewStyle(.circular)
@@ -50,7 +60,18 @@ struct TranslationView: View {
                 ) {
                     Text(viewModel.currentSource)
                     TextField("instances_units_field", text: $viewModel.currentTarget)
-                    Button("instances_units_save", action: viewModel.saveCurrent)
+                }
+                
+                Section {
+                    Button("instances_units_save_and_continue") {
+                        viewModel.saveCurrent()
+                    }
+                    Button("instances_units_save") {
+                        viewModel.saveCurrent(loadNext: false)
+                    }
+                    Button("instances_units_skip") {
+                        viewModel.loadNextUnit()
+                    }
                 }
             } else if viewModel.nextPage != nil {
                 Section {
