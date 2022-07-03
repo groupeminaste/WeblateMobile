@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import MyAppsiOS
 
 struct HomeView: View {
     
@@ -51,11 +50,6 @@ struct HomeView: View {
                         viewModel.showNewInstance.toggle()
                     }
                 }
-                Section(header: MyAppHeader()) {
-                    ForEach(MyApp.values) { app in
-                        MyAppView(app: app)
-                    }
-                }
             }
             .navigationTitle(Text("Weblate Mobile"))
             .sheet(isPresented: $viewModel.showNewInstance) {
@@ -63,6 +57,13 @@ struct HomeView: View {
                     instance: Instance(id: -1, name: "", host: "", token: ""),
                     onDone: viewModel.onAppear
                 ))
+            }
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: SettingsView()) {
+                        Image(systemName: "gearshape")
+                    }
+                }
             }
             .onAppear(perform: viewModel.onAppear)
         }

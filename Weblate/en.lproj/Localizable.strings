@@ -40,3 +40,6 @@
 "instances_units_query_check" = "Strings with any failing checks";
 "instances_units_query_approved" = "Approved strings";
 "instances_units_query_waitingForReview" = "Strings waiting for review";
+"settings_title" = "Settings";
+"settings_about" = "About";
+"settings_about_weblate" = "Weblate website";

@@ -77,6 +77,19 @@ class APIService {
             .execute(APIResponse<Translation>.self, completionHandler: completionHandler)
     }
     
+    func postComponentTranslations(
+        project: String,
+        component: String,
+        language_code: String,
+        completionHandler: @escaping (Translation?, APIResponseStatus) -> Void
+    ) {
+        APIRequest("POST", path: "/api/components/\(project)/\(component)/translations/", configuration: configuration)
+            .with(body: [
+                "language_code": language_code
+            ])
+            .execute(Translation.self, completionHandler: completionHandler)
+    }
+    
     func getTranslationUnits(
         project: String,
         component: String,
