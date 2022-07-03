@@ -32,3 +32,6 @@
 "instances_units_query_waitingForReview" = "Chaînes en attente de validation";
 "instances_units_query_variant" = "Chaines avec variantes";
 "instances_units_query_needsEditing" = "Chaînes à editer";
+"settings_title" = "Paramètres";
+"settings_about" = "A propos";
+"settings_about_weblate" = "Site de Weblate";
