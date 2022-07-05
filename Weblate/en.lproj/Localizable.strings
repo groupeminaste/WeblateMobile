@@ -42,4 +42,6 @@
 "instances_units_query_waitingForReview" = "Strings waiting for review";
 "settings_title" = "Settings";
 "settings_about" = "About";
-"settings_about_weblate" = "Weblate website";
+"settings_about_footer" = "For any query about the mobile app, please contact Groupe MINASTE (the mobile app is not developed by Weblate itself)";
+"settings_contribute" = "Contribute";
+"settings_contribute_github" = "GitHub repository for Weblate Mobile";
