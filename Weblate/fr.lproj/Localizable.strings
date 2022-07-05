@@ -34,4 +34,6 @@
 "instances_units_query_needsEditing" = "Chaînes à editer";
 "settings_title" = "Paramètres";
 "settings_about" = "A propos";
-"settings_about_weblate" = "Site de Weblate";
+"settings_about_footer" = "Pour toute requête à propos de l'application mobile, merci de contacter le Groupe MINASTE (l'application mobile n'est pas développée par Weblate directement)";
+"settings_contribute" = "Contribuer";
+"settings_contribute_github" = "Dépôt GitHub pour Weblate Mobile";

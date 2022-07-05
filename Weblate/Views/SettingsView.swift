@@ -14,9 +14,21 @@ struct SettingsView: View {
     
     var body: some View {
         Form {
-            Section(header: Text("settings_about")) {
-                Button("settings_about_weblate") {
+            Section(header: Text("settings_about"), footer: Text("settings_about_footer")) {
+                Button("Groupe MINASTE") {
+                    if let url = URL(string: "https://www.groupe-minaste.org/") {
+                        openURL(url)
+                    }
+                }
+                Button("Weblate") {
                     if let url = URL(string: "https://weblate.org/") {
+                        openURL(url)
+                    }
+                }
+            }
+            Section(header: Text("settings_contribute")) {
+                Button("settings_contribute_github") {
+                    if let url = URL(string: "https://github.com/GroupeMINASTE/WeblateMobile") {
                         openURL(url)
                     }
                 }
