@@ -24,7 +24,6 @@
 "instances_units_header_nothing" = "No hay nada que traducir aquí.";
 "instances_units_field" = "Entra una traducción aquí…";
 "instances_units_skip" = "Pasar";
-"settings_about_weblate" = "Sitio web de Weblate";
 "instances_units_query_unfinishedWithoutSuggestion" = "Cadenas de caracteres no terminadas sin sugestión";
 "instances_units_query_approved" = "Cadenas de caracteres aprovadas";
 "instances_units_query_check" = "Cadenas de caracteres con verificación que falla";
