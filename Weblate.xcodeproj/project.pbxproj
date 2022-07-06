@@ -73,6 +73,7 @@
 		6AB65634280F0F85001E2065 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		6AB65636280F1175001E2065 /* InstanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceView.swift; sourceTree = "<group>"; };
 		6AB65638280F11A7001E2065 /* InstanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceViewModel.swift; sourceTree = "<group>"; };
+		6AB658602875884000DA31A2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6ADDAB652858704500B40346 /* SearchQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchQuery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +240,7 @@
 				en,
 				Base,
 				fr,
+				es,
 			);
 			mainGroup = 6AB655F4280EDDB6001E2065;
 			packageReferences = (
@@ -310,6 +312,7 @@
 			children = (
 				6AB65620280EE224001E2065 /* en */,
 				6A427036287228DD0018A3C7 /* fr */,
+				6AB658602875884000DA31A2 /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -440,7 +443,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Weblate/Weblate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Weblate/Preview Content\"";
 				DEVELOPMENT_TEAM = ZL9396WK65;
 				ENABLE_PREVIEWS = YES;
@@ -455,7 +458,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = me.nathanfallet.Weblate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -471,7 +474,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Weblate/Weblate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Weblate/Preview Content\"";
 				DEVELOPMENT_TEAM = ZL9396WK65;
 				ENABLE_PREVIEWS = YES;
@@ -486,7 +489,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = me.nathanfallet.Weblate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
