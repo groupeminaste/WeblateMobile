@@ -34,3 +34,6 @@
 "instances_units_query_needsEditing" = "Cadenas de caracteres marcadas para edición";
 "instances_units_query" = "Mostrar:";
 "instances_use" = "Utilizar %@";
+"settings_contribute" = "Contribuir";
+"settings_contribute_github" = "Depósito GitHub de Weblate Mobile";
+"settings_about_footer" = "Para cualquier pregunta sobre la aplicación, por favor contactas el Groupe MINASTE (la aplicación mobil no está desarrollada por Weblate)";
